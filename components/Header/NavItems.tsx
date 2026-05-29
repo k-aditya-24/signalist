@@ -16,19 +16,19 @@ const NavItems = () => {
         }
     }
 
-  return (
-      <ul className='flex flex-col sm:flex-row p-2 gap-3 sm:gpa-10 font-medium'>
-          {
-              NAV_ITEMS.map(({href, title}) => ( 
-                  <li key={title}>
-                      <Link href={href} className={`hover:text-yellow-500 transition-colors  ${isActive(href) ? 'text-gray-100' : ''}`}>
-                          {title}
-                      </Link>
-                  </li>
-              ))
-          }
-    </ul>
-  )
+    return (
+        <ul className='flex flex-col sm:flex-row p-2 gap-3 sm:gpa-10 font-medium'>
+            {
+                NAV_ITEMS.map(({ href, label }) => (
+                    <li key={label}>
+                        <Link href={href} className={`hover:text-yellow-500 transition-colors  ${isActive(href) ? 'text-gray-100' : ''}`}>
+                            {label}
+                        </Link>
+                    </li>
+                ))
+            }
+        </ul>
+    )
 }
 
 export default NavItems
